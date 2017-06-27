@@ -1,0 +1,80 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "react-native-spotify-sdk",
+        "scope": null,
+        "escapedName": "react-native-spotify-sdk",
+        "name": "react-native-spotify-sdk",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/jonathangutierrez/Documents/Developer/TestSDK"
+    ]
+  ],
+  "_from": "react-native-spotify-sdk@latest",
+  "_id": "react-native-spotify-sdk@1.0.2",
+  "_inCache": true,
+  "_location": "/react-native-spotify-sdk",
+  "_nodeVersion": "6.9.2",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/react-native-spotify-sdk-1.0.2.tgz_1495241419708_0.7629891587421298"
+  },
+  "_npmUser": {
+    "name": "jonajgs",
+    "email": "jonathangtz.sosa@gmail.com"
+  },
+  "_npmVersion": "3.10.9",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "react-native-spotify-sdk",
+    "scope": null,
+    "escapedName": "react-native-spotify-sdk",
+    "name": "react-native-spotify-sdk",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/react-native-spotify-sdk/-/react-native-spotify-sdk-1.0.2.tgz",
+  "_shasum": "a6a4a662b522cc18ddfc002946bad9aec796d9ea",
+  "_shrinkwrap": null,
+  "_spec": "react-native-spotify-sdk",
+  "_where": "/Users/jonathangutierrez/Documents/Developer/TestSDK",
+  "author": "",
+  "dependencies": {},
+  "description": "Library for react native applications, integration sdk of spotify (now, only android, coming soon iOS)",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "a6a4a662b522cc18ddfc002946bad9aec796d9ea",
+    "tarball": "https://registry.npmjs.org/react-native-spotify-sdk/-/react-native-spotify-sdk-1.0.2.tgz"
+  },
+  "gitHead": "6b242a464a3cdc0ba43da64a390a99bb06d76e35",
+  "keywords": [
+    "react-native"
+  ],
+  "license": "",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "jonajgs",
+      "email": "jonathangtz.sosa@gmail.com"
+    }
+  ],
+  "name": "react-native-spotify-sdk",
+  "optionalDependencies": {},
+  "peerDependencies": {
+    "react-native": "^0.41.2"
+  },
+  "readme": "ERROR: No README data found!",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.2"
+}

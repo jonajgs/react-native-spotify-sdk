@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/jonathangutierrez/Documents/Developer/TestSDK/node_modules/react-native-spotify-sdk/android/build/intermediates/res/merged/release/xml/preferences.xml",
+        "source": "/Users/jonathangutierrez/Documents/Developer/TestSDK/node_modules/react-native-spotify-sdk/android/build/intermediates/exploded-aar/com.facebook.react/react-native/0.45.1/res/xml/preferences.xml"
+    },
+    {
+        "merged": "/Users/jonathangutierrez/Documents/Developer/sharefy/node_modules/RNSdkSpotify/android/build/intermediates/res/merged/release/xml/preferences.xml",
+        "source": "/Users/jonathangutierrez/Documents/Developer/sharefy/node_modules/RNSdkSpotify/android/build/intermediates/exploded-aar/com.facebook.react/react-native/0.43.3/res/xml/preferences.xml"
+    }
+]
