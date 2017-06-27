@@ -2,7 +2,16 @@
 
 ## this only works in Android, coming soon in iOS
 
-#Build
+
+## Get started
+`npm i -S react-native-spotify-sdk`
+
+```
+import Spotify from 'react-native-spotify-sdk';
+```
+
+and run `react-native link react-native-spotify-sdk`
+# Build
 
 Edit `android/build.grandle` and add `flatDir`
 ```
@@ -55,14 +64,6 @@ protected List<ReactPackage> getPackages() {
 
 ...
 ```
-
-## Get started
-`npm i -S react-native-spotify-sdk`
-
-```
-import Spotify from 'react-native-spotify-sdk';
-```
-
 
 ## Methods
 ```Java
