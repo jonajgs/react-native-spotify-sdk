@@ -247,10 +247,6 @@ public class RNSdkSpotifyModule extends ReactContextBaseJavaModule
     public AuthenticationRequest getAuthenticationRequest() {
         Type __type = AuthenticationResponse.Type.CODE;
 
-        if(type != "code") {
-            __type = AuthenticationResponse.Type.TOKEN;
-        }
-
         return new AuthenticationRequest.Builder(clientId, __type, redirectUri)
             .setShowDialog(false)
             .setScopes(new String[]{"user-read-email", "playlist-read-private", "playlist-read-collaborative", "playlist-modify-public", "playlist-modify-private", "streaming"})
@@ -277,10 +273,6 @@ public class RNSdkSpotifyModule extends ReactContextBaseJavaModule
         Activity currentActivity = getCurrentActivity();
 
         Type __type = AuthenticationResponse.Type.CODE;
-
-        if(type != "code") {
-            __type = AuthenticationResponse.Type.TOKEN;
-        }
 
         final AuthenticationRequest request = new AuthenticationRequest.Builder(clientId, __type, redirectUri)
             .setScopes(new String[]{"user-read-email", "playlist-read-private", "playlist-read-collaborative", "playlist-modify-public", "playlist-modify-private", "streaming"})
