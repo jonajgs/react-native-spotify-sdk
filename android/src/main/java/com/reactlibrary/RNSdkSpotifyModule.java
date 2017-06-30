@@ -245,10 +245,10 @@ public class RNSdkSpotifyModule extends ReactContextBaseJavaModule
 
     @ReactMethod
     public AuthenticationRequest getAuthenticationRequest() {
-        Type __type = AuthenticationResponse.Type.TOKEN;
+        Type __type = AuthenticationResponse.Type.CODE;
 
-        if(type == "code") {
-            __type = AuthenticationResponse.Type.CODE;
+        if(type != "code") {
+            __type = AuthenticationResponse.Type.TOKEN;
         }
 
         return new AuthenticationRequest.Builder(clientId, __type, redirectUri)
@@ -276,10 +276,10 @@ public class RNSdkSpotifyModule extends ReactContextBaseJavaModule
     {
         Activity currentActivity = getCurrentActivity();
 
-        Type __type = AuthenticationResponse.Type.TOKEN;
+        Type __type = AuthenticationResponse.Type.CODE;
 
-        if(type == "code") {
-            __type = AuthenticationResponse.Type.CODE;
+        if(type != "code") {
+            __type = AuthenticationResponse.Type.TOKEN;
         }
 
         final AuthenticationRequest request = new AuthenticationRequest.Builder(clientId, __type, redirectUri)
