@@ -77,7 +77,7 @@ public class RNSdkSpotifyModule extends ReactContextBaseJavaModule
 
     private String type;         // type of request, token or code
     private String clientId;     // clientId from spotify app
-    private String nextTrack;    // next track to play
+    private String nextTrack = "";    // next track to play
     private String redirectUri;  // redirect uri
     private String access_token; //access token to can play music
 
@@ -173,7 +173,11 @@ public class RNSdkSpotifyModule extends ReactContextBaseJavaModule
     }
 
     @ReactMethod
-    public Boolean nextTrack() {
+    public void getNextTrack(final Promise promise) {
+        promise.resolve(nextTrack);
+    }
+
+    public Boolean hasNextTrack() {
         return nextTrack != "";
     }
 
@@ -182,15 +186,28 @@ public class RNSdkSpotifyModule extends ReactContextBaseJavaModule
         nextTrack = track;
     }
 
+    @ReactMethod
+    public void whenSongIsFinish(final Promise promise) {
+        promises.add(promise);
+    };
+
     @Override
     public void onPlaybackEvent(PlayerEvent playerEvent) {
         Log.d("MainActivity", "Playback event received: " + playerEvent.name());
         switch (playerEvent.name()) {
             case EVENT_TRACK_DELIVERED: // when tracks is ended
-                if(nextTrack()) {
+                if(hasNextTrack()) {
                     playUri(nextTrack);
                     nextTrack = "";
                 }
+
+                List<Promise> promises = this.promises;
+
+                for (Promise p : promises) {
+                    p.resolve("Song is finished");
+                }
+
+                promises.removeAll(promises);
                 break;
             // Handle event type as necessary
             default:
