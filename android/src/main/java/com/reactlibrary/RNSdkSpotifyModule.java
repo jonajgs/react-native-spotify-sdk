@@ -277,12 +277,29 @@ public class RNSdkSpotifyModule extends ReactContextBaseJavaModule
 
     @ReactMethod
     public void pause() {
-        if(clientId == null || access_token == null || mPlayer == null) return;
         if(mPlayer.getPlaybackState().isPlaying) {
             mPlayer.pause(mOperationCallback);
         }else{
             mPlayer.resume(mOperationCallback);
         }
+    }
+
+    @ReactMethod
+    public void playNextTrack() {
+        if(nextTrack != "") {
+            playUri(nextTrack);
+            nextTrack = "";
+        } else {
+            pause();
+        }
+
+        List<Promise> promises = this.promises;
+
+        for (Promise p : promises) {
+            p.resolve("Song is finished");
+        }
+
+        promises.removeAll(promises);
     }
 
     private void openLoginWindow()
