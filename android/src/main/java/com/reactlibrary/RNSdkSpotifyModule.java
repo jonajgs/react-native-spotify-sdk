@@ -331,7 +331,7 @@ public class RNSdkSpotifyModule extends ReactContextBaseJavaModule
                     resolve(response);
                     break;
                 case ERROR:
-                    reject(E_AUTH_ERROR, "Error during authorisation");
+                    reject(E_AUTH_ERROR, "Error during authorisation: " + response.getError());
                     break;
                 default: // cancelled
                     reject(E_CANCELLED, "User cancelled the operation");
